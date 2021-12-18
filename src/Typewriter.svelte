@@ -10,7 +10,7 @@
     export let scrambleSlowdown = scramble ? true : false
 	export let cursor = true
 	export let delay = 0
-	export let cursorAfterEnd = false;
+	export let cursorAfterEnd = false
 
 	const dispatch = createEventDispatcher()
   
