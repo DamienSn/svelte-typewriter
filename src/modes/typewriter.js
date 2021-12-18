@@ -15,9 +15,15 @@ const mode = async (elements, options) => {
 		if (options.cascade) {
 			await writeEffect(element, options)
 			element.currentNode.classList.replace('typing', 'finished-typing')
+			if (options.cursorAfterEnd) {
+				element.currentNode.classList.add('cursor-displayed')
+			}
 		} else {
 			writeEffect(element, options).then(() => {
 				element.currentNode.classList.replace('typing', 'finished-typing')
+				if (options.cursorAfterEnd) {
+					element.currentNode.classList.add('cursor-displayed')
+				}
 			})
 		}
 	}

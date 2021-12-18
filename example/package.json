@@ -15,6 +15,6 @@
 	},
 	"dependencies": {
 		"svelte-loadable": "^1.5.1",
-		"svelte-typewriter": ".."
+		"svelte-typewriter": "file:.."
 	}
 }

@@ -10,10 +10,11 @@
     export let scrambleSlowdown = scramble ? true : false
 	export let cursor = true
 	export let delay = 0
+	export let cursorAfterEnd = false;
 
 	const dispatch = createEventDispatcher()
   
-    $: options = { interval, cascade, loop, loopRandom, scramble, scrambleSlowdown, cursor, delay, dispatch }
+    $: options = { interval, cascade, loop, loopRandom, scramble, scrambleSlowdown, cursor, delay, cursorAfterEnd, dispatch }
 </script>
 
 <style>
@@ -36,7 +37,7 @@
 		content: none;
 	}
 
-	.cursor :global(.typing::after) {
+	.cursor :global(.typing::after), .cursor :global(.finished-typing.cursor-displayed::after) {
 		content: '▌';
 		display: inline-block;
 		color: var(--cursor-color);
