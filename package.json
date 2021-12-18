@@ -35,9 +35,5 @@
 	},
 	"peerDependencies": {
 		"svelte": ">=3.28.x"
-	},
-	"dependencies": {
-		"svelte": "^3.44.3",
-		"vite": "^2.7.3"
 	}
 }
